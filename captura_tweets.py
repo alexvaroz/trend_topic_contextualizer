@@ -27,7 +27,7 @@ def list_trend_topics():
 
 def list_tweets_by_trend_topic(trend_topic: str):
     tweets = api.search_tweets(q=trend_topic + " -filter:retweets",
-                               tweet_mode='extended', lang='pt', count=100)
+                               tweet_mode='extended', lang='pt', count=80)
     tweets_list = []
     for tweet in tweets:
         tweets_list.append(tweet.full_text)

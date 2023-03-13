@@ -30,7 +30,7 @@ st.sidebar.write("""
                 Trata-se de um exercício para a aplicação prática de recursos do ChatGPT.\n
                 Nesse caso, a lista dos assuntos mais comentados no Twiiter, no Brasil, é
                  capturada e à API do ChatGPT, solicitando que sejam extraídos os tópicos 
-                 de 100 tweets relacionados a aquele assunto .\n 
+                 de 80 tweets relacionados a aquele assunto .\n 
                 
                 Para complementar a análise, é apresentada uma nuvem de palavras com o texto dos tweets
                 capturados.
@@ -53,10 +53,11 @@ st.markdown(f"{trend_topics_formatada}")
 topic = st.selectbox(label='Selecione o tópico:', options=trend_topics)
 tweets_list = prepare_tweets(list_tweets_by_trend_topic(topic))
 
-run_buton = st.button("Pesquisar")
-
 prompt = "vou te encaminhar uma lista com 100 tweets e quero que você explique em português o que está " \
          f"acontecendo com base nas postagens:  {tweets_list}"
+
+run_buton = st.button("Pesquisar")
+
 
 if run_buton:
     response = make_request(prompt)
