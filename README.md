@@ -1,0 +1,1 @@
+Trata-se de uma exploração de chamadas às APIs do ChatGPT e do Twitter. Uma lista dos TrendTopics do Twitter é apresentada e 80 tweets referentes a um deles é encaminhado ao ChatGPT para que ele contextualize.
